@@ -7,7 +7,7 @@ namespace IterationStatements
     {
         static void Main(string[] args)
         {
-                //TODO - Read each comment and complete its instruction
+                //DONE - Read each comment and complete its instruction
                 // like the example below
 
                 //Create a List called "numbers" - DONE!
@@ -17,38 +17,45 @@ namespace IterationStatements
             //Create a variable of type int and name it num
             //initialize the variable with a value of 0
 
-
+            var num = 0;
 
             // Create a do-while loop and use the template below:
-
+            do
             {
                 // Increment num by 1
+                num++;
 
                 // Then add num to the collection - numbers
-                    // Hint: reference num inside of the Add method's parentheses
-                numbers.Add(/* num */);
+                // Hint: reference num inside of the Add method's parentheses
+                numbers.Add(num);
 
             } // <---- While your variable is less than 100
-
+            while (num < 100);
+            Console.WriteLine($"after do while, numbers is {numbers.Count}");
 
 
             // Create a while loop
             // <--- While num is less than 200
+            while (num < 200)
             {
                 // Increment num by 1
+                num++;
                 // Then add num to the collection numbers
-                    //HINT: copy how this was done in the do while loop
-
+                //HINT: copy how this was done in the do while loop
+                numbers.Add(num);
             }
 
 
             // This is to show the user that the numbers will start increasing on the console
             Console.WriteLine("Increase:");
 
-
+            
             // Create a foreach loop using the collection - numbers
                 //In the scope of the foreach loop, print each number in numbers
-             
+            foreach (var number in numbers)
+            {
+                Console.WriteLine(number);
+            }
 
 
             Console.WriteLine("");
@@ -62,8 +69,10 @@ namespace IterationStatements
                 // Decrement i by 1
 
             //start for loop here
+            for (int i = 199; i <= numbers.Count && i >=0; i--) 
             {
                 // place numbers[i] inside of the Console.WriteLine() method
+                Console.WriteLine(numbers[i]);
             }
 
             //------------End of exercise
